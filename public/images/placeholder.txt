@@ -1,0 +1,9 @@
+# Placeholder Images for TrekSnout Website
+
+To add the actual dog images, please place them in this directory with the following names:
+
+1. dog-1.jpg - Happy dog with GPS tracker during outdoor adventure
+2. dog-2.jpg - Two dogs playing in water during adventure mission  
+3. dog-3.jpg - Two focused dogs ready for their next adventure mission
+
+For now, the website will use placeholder images from placeholder.com
