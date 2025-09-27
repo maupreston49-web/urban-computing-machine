@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, Target, Smartphone } from 'lucide-react';
+import { useAssessmentForm } from '../../contexts/AssessmentFormContext';
 
 const steps = [
   {
@@ -23,6 +24,8 @@ const steps = [
 ];
 
 export default function GettingStarted() {
+  const { openForm } = useAssessmentForm();
+
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,7 +63,10 @@ export default function GettingStarted() {
                 <p className="text-gray-700 mb-4">
                   Ready to give your dog a mission they'll love? Book your free assessment today.
                 </p>
-                <button className="bg-emerald-600 text-white px-8 py-3 rounded-lg hover:bg-emerald-700 transition-colors font-semibold">
+                <button 
+                  onClick={openForm}
+                  className="bg-emerald-600 text-white px-8 py-3 rounded-lg hover:bg-emerald-700 transition-colors font-semibold"
+                >
                   Schedule Free Assessment
                 </button>
               </div>

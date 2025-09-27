@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Form - TrekSnout</title>
+</head>
+<body>
+    <!-- This is a hidden form for Netlify to detect -->
+    <form name="assessment-request" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="firstName" />
+        <input type="text" name="lastName" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <input type="text" name="address" />
+        <input type="text" name="dogName" />
+        <input type="text" name="dogAge" />
+        <input type="text" name="dogBreed" />
+        <input type="text" name="dogWeight" />
+        <textarea name="dogTemperament"></textarea>
+        <input type="radio" name="serviceType" value="high-drive-missions" />
+        <input type="radio" name="serviceType" value="hunt-track" />
+        <input type="radio" name="serviceType" value="traditional-walks" />
+        <input type="radio" name="serviceType" value="gentle-explorations" />
+        <input type="radio" name="serviceType" value="not-sure" />
+        <select name="preferredTime">
+            <option value="morning">Morning (8 AM - 12 PM)</option>
+            <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+            <option value="evening">Evening (5 PM - 8 PM)</option>
+            <option value="anytime">Anytime</option>
+        </select>
+        <textarea name="additionalInfo"></textarea>
+        <input type="text" name="bot-field" />
+    </form>
+</body>
+</html>

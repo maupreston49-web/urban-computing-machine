@@ -10,8 +10,13 @@ import GettingStarted from './components/sections/GettingStarted';
 import WhyItWorks from './components/sections/WhyItWorks';
 import FAQ from './components/sections/FAQ';
 import Footer from './components/layout/Footer';
+import { AssessmentFormProvider } from './contexts/AssessmentFormContext';
+import AssessmentForm from './components/AssessmentForm';
+import { useAssessmentForm } from './contexts/AssessmentFormContext';
 
-function App() {
+function AppContent() {
+  const { isFormOpen, closeForm } = useAssessmentForm();
+
   return (
     <div className="min-h-screen bg-neutral-900">
       <Header />
@@ -25,7 +30,16 @@ function App() {
       <WhyItWorks />
       <FAQ />
       <Footer />
+      <AssessmentForm isOpen={isFormOpen} onClose={closeForm} />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <AssessmentFormProvider>
+      <AppContent />
+    </AssessmentFormProvider>
   );
 }
 

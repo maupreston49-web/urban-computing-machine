@@ -1,7 +1,10 @@
 import React from 'react';
 import { MapPin, Clock } from 'lucide-react';
+import { useAssessmentForm } from '../../contexts/AssessmentFormContext';
 
 export default function Hero() {
+  const { openForm } = useAssessmentForm();
+
   return (
     <section className="bg-gradient-to-br from-emerald-50 to-green-100 py-12 sm:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,7 +22,10 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
-            <button className="w-full sm:w-auto bg-emerald-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105 active:scale-95">
+            <button 
+              onClick={openForm}
+              className="w-full sm:w-auto bg-emerald-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105 active:scale-95"
+            >
               Book Free Assessment
             </button>
             <button className="w-full sm:w-auto border-2 border-emerald-600 text-emerald-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-emerald-50 transition-colors active:bg-emerald-100">

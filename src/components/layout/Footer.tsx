@@ -1,7 +1,10 @@
 import React from 'react';
 import { Compass, Phone, Mail, MapPin } from 'lucide-react';
+import { useAssessmentForm } from '../../contexts/AssessmentFormContext';
 
 export default function Footer() {
+  const { openForm } = useAssessmentForm();
+
   return (
     <footer id="contact" className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,7 +18,10 @@ export default function Footer() {
               Jacksonville's premier dog adventures that train while they play. 
               Purpose-filled outings tailored to your dog's unique needs.
             </p>
-            <button className="bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors font-semibold">
+            <button 
+              onClick={openForm}
+              className="bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors font-semibold"
+            >
               Book Free Assessment
             </button>
           </div>

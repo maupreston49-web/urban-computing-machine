@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Menu, X, Compass } from 'lucide-react';
+import { useAssessmentForm } from '../../contexts/AssessmentFormContext';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { openForm } = useAssessmentForm();
 
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -24,7 +26,10 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <button className="hidden md:block bg-tactical-600 text-white px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg hover:bg-tactical-700 transition-colors font-semibold text-sm lg:text-base">
+            <button 
+              onClick={openForm}
+              className="hidden md:block bg-tactical-600 text-white px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg hover:bg-tactical-700 transition-colors font-semibold text-sm lg:text-base"
+            >
               Book Free Assessment
             </button>
 
@@ -76,7 +81,10 @@ export default function Header() {
               >
                 Contact
               </a>
-              <button className="w-full mt-3 bg-tactical-600 text-white px-4 py-3 rounded-lg hover:bg-tactical-700 transition-colors font-semibold">
+              <button 
+                onClick={openForm}
+                className="w-full mt-3 bg-tactical-600 text-white px-4 py-3 rounded-lg hover:bg-tactical-700 transition-colors font-semibold"
+              >
                 Book Free Assessment
               </button>
             </div>
