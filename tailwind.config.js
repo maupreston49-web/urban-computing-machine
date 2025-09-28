@@ -4,15 +4,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        tactical: {
-          400: '#7d927d',
-          600: '#5f755f',
-          700: '#4a5d4a',
-        }
+        primary: '#009688',
+        secondary: '#222F3E',
+        accent: '#FFC107',
+        bg: '#F8F9FA',
       },
       fontFamily: {
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
-      }
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        glow: '0 25px 50px -12px rgba(0, 150, 136, 0.35)',
+      },
     },
   },
   plugins: [],
