@@ -34,9 +34,9 @@ const FeatureSection: React.FC = () => {
     <section id="adventures" className="bg-bg py-20">
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-4 md:px-6">
         <SectionHeading
-          eyebrow="What We Do"
-          title="Adventure ops designed for wagging tails"
-          description="Whether your pup craves splashy creek sprints or mindful forest sniffaris, TrekSnout brings the right mix of thrill, enrichment, and training finesse."
+          eyebrow="Our Approach"
+          title="Adventure methodology designed for wagging tails"
+          description="Every TrekSnout experience combines structured training, sensory enrichment, and pure joy to build confidence and strengthen the bond between you and your dog."
         />
         <div className="grid gap-6 md:grid-cols-2">
           {features.map(({ icon: Icon, title, description }) => (

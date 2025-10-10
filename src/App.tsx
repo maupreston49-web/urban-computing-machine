@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Partners from './components/Partners';
 import FeatureSection from './components/FeatureSection';
-import AdventureShowcase from './components/AdventureShowcase';
+import ServicesSection from './components/ServicesSection';
 import StatsSection from './components/StatsSection';
 import JourneyTimeline from './components/JourneyTimeline';
 import Testimonials from './components/Testimonials';
@@ -18,8 +18,8 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <Partners />
+        <ServicesSection />
         <FeatureSection />
-        <AdventureShowcase />
         <StatsSection />
         <JourneyTimeline />
         <Testimonials />

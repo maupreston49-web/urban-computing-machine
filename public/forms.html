@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TrekSnout Forms</title>
+</head>
+<body>
+    <!-- Netlify form detection - this file is used during build to detect forms -->
+    
+    <!-- Trail Match Booking Form -->
+    <form name="trail-match-booking" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <input type="text" name="dogName" />
+        <input type="text" name="dogBreed" />
+        <input type="text" name="dogAge" />
+        <input type="text" name="dogEnergyLevel" />
+        <input type="date" name="preferredDate" />
+        <input type="text" name="preferredTime" />
+        <input type="text" name="location" />
+        <textarea name="specialNeeds"></textarea>
+        <textarea name="goals"></textarea>
+        <input type="text" name="bot-field" />
+    </form>
+
+    <!-- Contact Form -->
+    <form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <input type="text" name="subject" />
+        <textarea name="message"></textarea>
+        <input type="text" name="bot-field" />
+    </form>
+</body>
+</html>
